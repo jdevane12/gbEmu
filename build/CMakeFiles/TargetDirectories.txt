@@ -1,0 +1,3 @@
+/home/jacob/Documents/gbEmu/build/CMakeFiles/main.dir
+/home/jacob/Documents/gbEmu/build/CMakeFiles/edit_cache.dir
+/home/jacob/Documents/gbEmu/build/CMakeFiles/rebuild_cache.dir
