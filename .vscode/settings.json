@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "cpu.h": "c",
+        "stdint.h": "c"
+    }
+}

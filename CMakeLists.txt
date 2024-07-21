@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
+project(gbEmu)
 
 add_executable(
     main
@@ -6,6 +7,7 @@ add_executable(
 )
 
 target_link_libraries(main
-    
-
+    emulator
     )
+
+add_subdirectory(emulator)
