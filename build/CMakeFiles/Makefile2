@@ -54,41 +54,76 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jacob/Documents/gbEmu
+CMAKE_SOURCE_DIR = /home/jd/gbEmu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jacob/Documents/gbEmu/build
+CMAKE_BINARY_DIR = /home/jd/gbEmu/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/main.dir/all
+all: emulator/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: emulator/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/main.dir/clean
+clean: emulator/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory emulator
+
+# Recursive "all" directory target.
+emulator/all: emulator/CMakeFiles/emulator.dir/all
+emulator/all: emulator/cpu/all
+.PHONY : emulator/all
+
+# Recursive "preinstall" directory target.
+emulator/preinstall: emulator/cpu/preinstall
+.PHONY : emulator/preinstall
+
+# Recursive "clean" directory target.
+emulator/clean: emulator/CMakeFiles/emulator.dir/clean
+emulator/clean: emulator/cpu/clean
+.PHONY : emulator/clean
+
+#=============================================================================
+# Directory level rules for directory emulator/cpu
+
+# Recursive "all" directory target.
+emulator/cpu/all: emulator/cpu/CMakeFiles/cpu.dir/all
+.PHONY : emulator/cpu/all
+
+# Recursive "preinstall" directory target.
+emulator/cpu/preinstall:
+.PHONY : emulator/cpu/preinstall
+
+# Recursive "clean" directory target.
+emulator/cpu/clean: emulator/cpu/CMakeFiles/cpu.dir/clean
+.PHONY : emulator/cpu/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all:
+CMakeFiles/main.dir/all: emulator/CMakeFiles/emulator.dir/all
+CMakeFiles/main.dir/all: emulator/cpu/CMakeFiles/cpu.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jacob/Documents/gbEmu/build/CMakeFiles --progress-num=1,2 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jd/gbEmu/build/CMakeFiles --progress-num=5,6 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jacob/Documents/gbEmu/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jacob/Documents/gbEmu/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
 
 # Convenience name for target.
@@ -99,6 +134,58 @@ main: CMakeFiles/main.dir/rule
 CMakeFiles/main.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
 .PHONY : CMakeFiles/main.dir/clean
+
+#=============================================================================
+# Target rules for target emulator/CMakeFiles/emulator.dir
+
+# All Build rule for target.
+emulator/CMakeFiles/emulator.dir/all: emulator/cpu/CMakeFiles/cpu.dir/all
+	$(MAKE) $(MAKESILENT) -f emulator/CMakeFiles/emulator.dir/build.make emulator/CMakeFiles/emulator.dir/depend
+	$(MAKE) $(MAKESILENT) -f emulator/CMakeFiles/emulator.dir/build.make emulator/CMakeFiles/emulator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jd/gbEmu/build/CMakeFiles --progress-num=3,4 "Built target emulator"
+.PHONY : emulator/CMakeFiles/emulator.dir/all
+
+# Build rule for subdir invocation for target.
+emulator/CMakeFiles/emulator.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 emulator/CMakeFiles/emulator.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 0
+.PHONY : emulator/CMakeFiles/emulator.dir/rule
+
+# Convenience name for target.
+emulator: emulator/CMakeFiles/emulator.dir/rule
+.PHONY : emulator
+
+# clean rule for target.
+emulator/CMakeFiles/emulator.dir/clean:
+	$(MAKE) $(MAKESILENT) -f emulator/CMakeFiles/emulator.dir/build.make emulator/CMakeFiles/emulator.dir/clean
+.PHONY : emulator/CMakeFiles/emulator.dir/clean
+
+#=============================================================================
+# Target rules for target emulator/cpu/CMakeFiles/cpu.dir
+
+# All Build rule for target.
+emulator/cpu/CMakeFiles/cpu.dir/all:
+	$(MAKE) $(MAKESILENT) -f emulator/cpu/CMakeFiles/cpu.dir/build.make emulator/cpu/CMakeFiles/cpu.dir/depend
+	$(MAKE) $(MAKESILENT) -f emulator/cpu/CMakeFiles/cpu.dir/build.make emulator/cpu/CMakeFiles/cpu.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jd/gbEmu/build/CMakeFiles --progress-num=1,2 "Built target cpu"
+.PHONY : emulator/cpu/CMakeFiles/cpu.dir/all
+
+# Build rule for subdir invocation for target.
+emulator/cpu/CMakeFiles/cpu.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 emulator/cpu/CMakeFiles/cpu.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 0
+.PHONY : emulator/cpu/CMakeFiles/cpu.dir/rule
+
+# Convenience name for target.
+cpu: emulator/cpu/CMakeFiles/cpu.dir/rule
+.PHONY : cpu
+
+# clean rule for target.
+emulator/cpu/CMakeFiles/cpu.dir/clean:
+	$(MAKE) $(MAKESILENT) -f emulator/cpu/CMakeFiles/cpu.dir/build.make emulator/cpu/CMakeFiles/cpu.dir/clean
+.PHONY : emulator/cpu/CMakeFiles/cpu.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

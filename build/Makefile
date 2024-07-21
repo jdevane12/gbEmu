@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jacob/Documents/gbEmu
+CMAKE_SOURCE_DIR = /home/jd/gbEmu
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jacob/Documents/gbEmu/build
+CMAKE_BINARY_DIR = /home/jd/gbEmu/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jacob/Documents/gbEmu/build/CMakeFiles /home/jacob/Documents/gbEmu/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles /home/jd/gbEmu/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jacob/Documents/gbEmu/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,32 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+#=============================================================================
+# Target rules for targets named emulator
+
+# Build rule for target.
+emulator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 emulator
+.PHONY : emulator
+
+# fast build rule for target.
+emulator/fast:
+	$(MAKE) $(MAKESILENT) -f emulator/CMakeFiles/emulator.dir/build.make emulator/CMakeFiles/emulator.dir/build
+.PHONY : emulator/fast
+
+#=============================================================================
+# Target rules for targets named cpu
+
+# Build rule for target.
+cpu: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpu
+.PHONY : cpu
+
+# fast build rule for target.
+cpu/fast:
+	$(MAKE) $(MAKESILENT) -f emulator/cpu/CMakeFiles/cpu.dir/build.make emulator/cpu/CMakeFiles/cpu.dir/build
+.PHONY : cpu/fast
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -161,6 +187,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... cpu"
+	@echo "... emulator"
 	@echo "... main"
 	@echo "... main.o"
 	@echo "... main.i"

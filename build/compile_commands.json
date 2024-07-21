@@ -1,7 +1,17 @@
 [
 {
-  "directory": "/home/jacob/Documents/gbEmu/build",
-  "command": "/usr/bin/gcc-12   -g -o CMakeFiles/main.dir/main.c.o -c /home/jacob/Documents/gbEmu/main.c",
-  "file": "/home/jacob/Documents/gbEmu/main.c"
+  "directory": "/home/jd/gbEmu/build",
+  "command": "/usr/bin/gcc  -I/home/jd/gbEmu/emulator -I/home/jd/gbEmu/emulator/cpu -g -o CMakeFiles/main.dir/main.c.o -c /home/jd/gbEmu/main.c",
+  "file": "/home/jd/gbEmu/main.c"
+},
+{
+  "directory": "/home/jd/gbEmu/build/emulator",
+  "command": "/usr/bin/gcc  -I/home/jd/gbEmu/emulator -I/home/jd/gbEmu/emulator/cpu -g -o CMakeFiles/emulator.dir/emulator.c.o -c /home/jd/gbEmu/emulator/emulator.c",
+  "file": "/home/jd/gbEmu/emulator/emulator.c"
+},
+{
+  "directory": "/home/jd/gbEmu/build/emulator/cpu",
+  "command": "/usr/bin/gcc  -I/home/jd/gbEmu/emulator/cpu -g -o CMakeFiles/cpu.dir/cpu.c.o -c /home/jd/gbEmu/emulator/cpu/cpu.c",
+  "file": "/home/jd/gbEmu/emulator/cpu/cpu.c"
 }
 ]
