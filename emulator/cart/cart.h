@@ -1,0 +1,1 @@
+rom_load(char **rom);

@@ -82,16 +82,34 @@ clean: emulator/clean
 # Recursive "all" directory target.
 emulator/all: emulator/CMakeFiles/emulator.dir/all
 emulator/all: emulator/cpu/all
+emulator/all: emulator/cart/all
 .PHONY : emulator/all
 
 # Recursive "preinstall" directory target.
 emulator/preinstall: emulator/cpu/preinstall
+emulator/preinstall: emulator/cart/preinstall
 .PHONY : emulator/preinstall
 
 # Recursive "clean" directory target.
 emulator/clean: emulator/CMakeFiles/emulator.dir/clean
 emulator/clean: emulator/cpu/clean
+emulator/clean: emulator/cart/clean
 .PHONY : emulator/clean
+
+#=============================================================================
+# Directory level rules for directory emulator/cart
+
+# Recursive "all" directory target.
+emulator/cart/all: emulator/cart/CMakeFiles/cart.dir/all
+.PHONY : emulator/cart/all
+
+# Recursive "preinstall" directory target.
+emulator/cart/preinstall:
+.PHONY : emulator/cart/preinstall
+
+# Recursive "clean" directory target.
+emulator/cart/clean: emulator/cart/CMakeFiles/cart.dir/clean
+.PHONY : emulator/cart/clean
 
 #=============================================================================
 # Directory level rules for directory emulator/cpu
@@ -114,14 +132,15 @@ emulator/cpu/clean: emulator/cpu/CMakeFiles/cpu.dir/clean
 # All Build rule for target.
 CMakeFiles/main.dir/all: emulator/CMakeFiles/emulator.dir/all
 CMakeFiles/main.dir/all: emulator/cpu/CMakeFiles/cpu.dir/all
+CMakeFiles/main.dir/all: emulator/cart/CMakeFiles/cart.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jd/gbEmu/build/CMakeFiles --progress-num=5,6 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jd/gbEmu/build/CMakeFiles --progress-num=7,8 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
@@ -140,14 +159,15 @@ CMakeFiles/main.dir/clean:
 
 # All Build rule for target.
 emulator/CMakeFiles/emulator.dir/all: emulator/cpu/CMakeFiles/cpu.dir/all
+emulator/CMakeFiles/emulator.dir/all: emulator/cart/CMakeFiles/cart.dir/all
 	$(MAKE) $(MAKESILENT) -f emulator/CMakeFiles/emulator.dir/build.make emulator/CMakeFiles/emulator.dir/depend
 	$(MAKE) $(MAKESILENT) -f emulator/CMakeFiles/emulator.dir/build.make emulator/CMakeFiles/emulator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jd/gbEmu/build/CMakeFiles --progress-num=3,4 "Built target emulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jd/gbEmu/build/CMakeFiles --progress-num=5,6 "Built target emulator"
 .PHONY : emulator/CMakeFiles/emulator.dir/all
 
 # Build rule for subdir invocation for target.
 emulator/CMakeFiles/emulator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 emulator/CMakeFiles/emulator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 0
 .PHONY : emulator/CMakeFiles/emulator.dir/rule
@@ -165,15 +185,15 @@ emulator/CMakeFiles/emulator.dir/clean:
 # Target rules for target emulator/cpu/CMakeFiles/cpu.dir
 
 # All Build rule for target.
-emulator/cpu/CMakeFiles/cpu.dir/all:
+emulator/cpu/CMakeFiles/cpu.dir/all: emulator/cart/CMakeFiles/cart.dir/all
 	$(MAKE) $(MAKESILENT) -f emulator/cpu/CMakeFiles/cpu.dir/build.make emulator/cpu/CMakeFiles/cpu.dir/depend
 	$(MAKE) $(MAKESILENT) -f emulator/cpu/CMakeFiles/cpu.dir/build.make emulator/cpu/CMakeFiles/cpu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jd/gbEmu/build/CMakeFiles --progress-num=1,2 "Built target cpu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jd/gbEmu/build/CMakeFiles --progress-num=3,4 "Built target cpu"
 .PHONY : emulator/cpu/CMakeFiles/cpu.dir/all
 
 # Build rule for subdir invocation for target.
 emulator/cpu/CMakeFiles/cpu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 emulator/cpu/CMakeFiles/cpu.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 0
 .PHONY : emulator/cpu/CMakeFiles/cpu.dir/rule
@@ -186,6 +206,32 @@ cpu: emulator/cpu/CMakeFiles/cpu.dir/rule
 emulator/cpu/CMakeFiles/cpu.dir/clean:
 	$(MAKE) $(MAKESILENT) -f emulator/cpu/CMakeFiles/cpu.dir/build.make emulator/cpu/CMakeFiles/cpu.dir/clean
 .PHONY : emulator/cpu/CMakeFiles/cpu.dir/clean
+
+#=============================================================================
+# Target rules for target emulator/cart/CMakeFiles/cart.dir
+
+# All Build rule for target.
+emulator/cart/CMakeFiles/cart.dir/all:
+	$(MAKE) $(MAKESILENT) -f emulator/cart/CMakeFiles/cart.dir/build.make emulator/cart/CMakeFiles/cart.dir/depend
+	$(MAKE) $(MAKESILENT) -f emulator/cart/CMakeFiles/cart.dir/build.make emulator/cart/CMakeFiles/cart.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jd/gbEmu/build/CMakeFiles --progress-num=1,2 "Built target cart"
+.PHONY : emulator/cart/CMakeFiles/cart.dir/all
+
+# Build rule for subdir invocation for target.
+emulator/cart/CMakeFiles/cart.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 emulator/cart/CMakeFiles/cart.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jd/gbEmu/build/CMakeFiles 0
+.PHONY : emulator/cart/CMakeFiles/cart.dir/rule
+
+# Convenience name for target.
+cart: emulator/cart/CMakeFiles/cart.dir/rule
+.PHONY : cart
+
+# clean rule for target.
+emulator/cart/CMakeFiles/cart.dir/clean:
+	$(MAKE) $(MAKESILENT) -f emulator/cart/CMakeFiles/cart.dir/build.make emulator/cart/CMakeFiles/cart.dir/clean
+.PHONY : emulator/cart/CMakeFiles/cart.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

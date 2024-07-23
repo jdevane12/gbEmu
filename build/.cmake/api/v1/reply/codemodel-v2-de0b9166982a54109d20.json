@@ -19,14 +19,15 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						2
+						3
 					]
 				},
 				{
 					"build" : "emulator",
 					"childIndexes" : 
 					[
-						2
+						2,
+						3
 					],
 					"jsonFile" : "directory-emulator-Debug-aed963517dac90925719.json",
 					"minimumCMakeVersion" : 
@@ -38,7 +39,7 @@
 					"source" : "emulator",
 					"targetIndexes" : 
 					[
-						1
+						2
 					]
 				},
 				{
@@ -53,6 +54,21 @@
 					"source" : "emulator/cpu",
 					"targetIndexes" : 
 					[
+						1
+					]
+				},
+				{
+					"build" : "emulator/cart",
+					"jsonFile" : "directory-emulator.cart-Debug-2d96f978a1c5c9ccd691.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "emulator/cart",
+					"targetIndexes" : 
+					[
 						0
 					]
 				}
@@ -65,37 +81,46 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					],
 					"name" : "gbEmu",
 					"targetIndexes" : 
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
 			"targets" : 
 			[
 				{
+					"directoryIndex" : 3,
+					"id" : "cart::@875e8b05de5ebae59e47",
+					"jsonFile" : "target-cart-Debug-0e735c1326765dedee74.json",
+					"name" : "cart",
+					"projectIndex" : 0
+				},
+				{
 					"directoryIndex" : 2,
 					"id" : "cpu::@e1af74150516db91f28d",
-					"jsonFile" : "target-cpu-Debug-bb64bfccdc82c14d2ea5.json",
+					"jsonFile" : "target-cpu-Debug-a8795621343937a64930.json",
 					"name" : "cpu",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "emulator::@1c3256c8de4e75002d5e",
-					"jsonFile" : "target-emulator-Debug-3dcdbbc5f3c048d15a19.json",
+					"jsonFile" : "target-emulator-Debug-07ff460300cb708d8618.json",
 					"name" : "emulator",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "main::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-main-Debug-385972d6199f3d49d233.json",
+					"jsonFile" : "target-main-Debug-3f6f120e6b0433205dfb.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}

@@ -20,8 +20,11 @@ emulator/cpu/CMakeFiles/cpu.dir/cpu.c.o: ../emulator/cpu/cpu.c \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-  ../emulator/cpu/cpu.h
+  ../emulator/cpu/cpu.h \
+  ../emulator/cart/cart.h
 
+
+../emulator/cart/cart.h:
 
 ../emulator/cpu/cpu.h:
 

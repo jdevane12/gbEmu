@@ -126,6 +126,9 @@
 		},
 		{
 			"path" : "emulator/cpu/CMakeLists.txt"
+		},
+		{
+			"path" : "emulator/cart/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

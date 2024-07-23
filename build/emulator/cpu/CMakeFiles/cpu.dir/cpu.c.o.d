@@ -15,4 +15,4 @@ emulator/cpu/CMakeFiles/cpu.dir/cpu.c.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /home/jd/gbEmu/emulator/cpu/cpu.h
+ /home/jd/gbEmu/emulator/cpu/cpu.h /home/jd/gbEmu/emulator/cart/cart.h

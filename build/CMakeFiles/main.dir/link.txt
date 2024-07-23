@@ -1,1 +1,1 @@
-/usr/bin/gcc -g CMakeFiles/main.dir/main.c.o -o main  emulator/libemulator.a emulator/cpu/libcpu.a 
+/usr/bin/gcc -g CMakeFiles/main.dir/main.c.o -o main  emulator/libemulator.a emulator/cpu/libcpu.a emulator/cart/libcart.a 

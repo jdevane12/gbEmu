@@ -4,7 +4,7 @@
 # compile C with /usr/bin/gcc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/jd/gbEmu/emulator -I/home/jd/gbEmu/emulator/cpu
+C_INCLUDES = -I/home/jd/gbEmu/emulator -I/home/jd/gbEmu/emulator/cpu -I/home/jd/gbEmu/emulator/cart
 
 C_FLAGS = -g
 

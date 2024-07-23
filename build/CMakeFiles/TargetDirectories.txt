@@ -7,3 +7,6 @@
 /home/jd/gbEmu/build/emulator/cpu/CMakeFiles/cpu.dir
 /home/jd/gbEmu/build/emulator/cpu/CMakeFiles/edit_cache.dir
 /home/jd/gbEmu/build/emulator/cpu/CMakeFiles/rebuild_cache.dir
+/home/jd/gbEmu/build/emulator/cart/CMakeFiles/cart.dir
+/home/jd/gbEmu/build/emulator/cart/CMakeFiles/edit_cache.dir
+/home/jd/gbEmu/build/emulator/cart/CMakeFiles/rebuild_cache.dir

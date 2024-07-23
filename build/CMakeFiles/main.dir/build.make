@@ -94,6 +94,7 @@ main: CMakeFiles/main.dir/main.c.o
 main: CMakeFiles/main.dir/build.make
 main: emulator/libemulator.a
 main: emulator/cpu/libcpu.a
+main: emulator/cart/libcart.a
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jd/gbEmu/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)

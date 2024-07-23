@@ -54,6 +54,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "/home/jd/gbEmu/emulator/cpu"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/jd/gbEmu/emulator/cart"
 				}
 			],
 			"language" : "C",
@@ -72,6 +76,10 @@
 		{
 			"backtrace" : 2,
 			"id" : "cpu::@e1af74150516db91f28d"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "cart::@875e8b05de5ebae59e47"
 		}
 	],
 	"id" : "main::@6890427a1f51a3e7e1df",
@@ -94,6 +102,10 @@
 			},
 			{
 				"fragment" : "emulator/cpu/libcpu.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "emulator/cart/libcart.a",
 				"role" : "libraries"
 			}
 		],

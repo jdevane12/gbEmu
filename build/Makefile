@@ -155,6 +155,19 @@ cpu/fast:
 	$(MAKE) $(MAKESILENT) -f emulator/cpu/CMakeFiles/cpu.dir/build.make emulator/cpu/CMakeFiles/cpu.dir/build
 .PHONY : cpu/fast
 
+#=============================================================================
+# Target rules for targets named cart
+
+# Build rule for target.
+cart: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cart
+.PHONY : cart
+
+# fast build rule for target.
+cart/fast:
+	$(MAKE) $(MAKESILENT) -f emulator/cart/CMakeFiles/cart.dir/build.make emulator/cart/CMakeFiles/cart.dir/build
+.PHONY : cart/fast
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -187,6 +200,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... cart"
 	@echo "... cpu"
 	@echo "... emulator"
 	@echo "... main"

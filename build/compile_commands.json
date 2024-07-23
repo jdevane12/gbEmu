@@ -1,17 +1,22 @@
 [
 {
   "directory": "/home/jd/gbEmu/build",
-  "command": "/usr/bin/gcc  -I/home/jd/gbEmu/emulator -I/home/jd/gbEmu/emulator/cpu -g -o CMakeFiles/main.dir/main.c.o -c /home/jd/gbEmu/main.c",
+  "command": "/usr/bin/gcc  -I/home/jd/gbEmu/emulator -I/home/jd/gbEmu/emulator/cpu -I/home/jd/gbEmu/emulator/cart -g -o CMakeFiles/main.dir/main.c.o -c /home/jd/gbEmu/main.c",
   "file": "/home/jd/gbEmu/main.c"
 },
 {
   "directory": "/home/jd/gbEmu/build/emulator",
-  "command": "/usr/bin/gcc  -I/home/jd/gbEmu/emulator -I/home/jd/gbEmu/emulator/cpu -g -o CMakeFiles/emulator.dir/emulator.c.o -c /home/jd/gbEmu/emulator/emulator.c",
+  "command": "/usr/bin/gcc  -I/home/jd/gbEmu/emulator -I/home/jd/gbEmu/emulator/cpu -I/home/jd/gbEmu/emulator/cart -g -o CMakeFiles/emulator.dir/emulator.c.o -c /home/jd/gbEmu/emulator/emulator.c",
   "file": "/home/jd/gbEmu/emulator/emulator.c"
 },
 {
   "directory": "/home/jd/gbEmu/build/emulator/cpu",
-  "command": "/usr/bin/gcc  -I/home/jd/gbEmu/emulator/cpu -g -o CMakeFiles/cpu.dir/cpu.c.o -c /home/jd/gbEmu/emulator/cpu/cpu.c",
+  "command": "/usr/bin/gcc  -I/home/jd/gbEmu/emulator/cpu -I/home/jd/gbEmu/emulator/cart -g -o CMakeFiles/cpu.dir/cpu.c.o -c /home/jd/gbEmu/emulator/cpu/cpu.c",
   "file": "/home/jd/gbEmu/emulator/cpu/cpu.c"
+},
+{
+  "directory": "/home/jd/gbEmu/build/emulator/cart",
+  "command": "/usr/bin/gcc  -I/home/jd/gbEmu/emulator/cart -g -o CMakeFiles/cart.dir/cart.c.o -c /home/jd/gbEmu/emulator/cart/cart.c",
+  "file": "/home/jd/gbEmu/emulator/cart/cart.c"
 }
 ]

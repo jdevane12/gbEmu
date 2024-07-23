@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include "cpu.h"
-
+#include "cart.h"
 
 void cpuInit(gbCPU* cpu) {
     cpu->pc = 0x100; // Initialize the program counter
